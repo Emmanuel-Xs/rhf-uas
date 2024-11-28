@@ -20,6 +20,8 @@ export async function loginAction(
       errors: { error: ["Invalid Form Data"] },
     };
   }
+  // Here, we use `Object.fromEntries(payload)` to convert the `FormData` object into a plain object. This allows us to work with the data in a format that the zod schema understands.
+
   const formData = Object.fromEntries(payload);
   console.log("form data", formData);
 
